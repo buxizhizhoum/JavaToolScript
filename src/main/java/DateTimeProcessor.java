@@ -4,7 +4,7 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
-public class DateTimeProcesser {
+public class DateTimeProcessor {
     /**
      * convert between different datetime string format
      * @param dt_str datetime string to convert
