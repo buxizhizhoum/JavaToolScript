@@ -12,7 +12,7 @@ public class DateTimeProcessor {
      * @param out_format out put datetime format
      * @return coverted datetime string
      */
-    private static String convertDateTimeFormat(String dt_str, String in_format, String out_format){
+    public static String convertDateTimeFormat(String dt_str, String in_format, String out_format){
         SimpleDateFormat input = new SimpleDateFormat(in_format);
         SimpleDateFormat output = new SimpleDateFormat(out_format);
         try{
