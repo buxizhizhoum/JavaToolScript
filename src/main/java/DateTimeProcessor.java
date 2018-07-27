@@ -75,4 +75,26 @@ public class DateTimeProcessor {
         LocalDateTime res_dt = localDateTime.minusMinutes(shift);
         return res_dt.format(formatter);
     }
+
+    /**
+     * generate datetime string according to current timestamp
+     */
+    public static String genDateTimeStr(int interval){
+        Long timeStamp = System.currentTimeMillis();  //get current timestamp
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmm");
+        // convert to datetime format
+        return sdf.format(new Date(Long.parseLong(String.valueOf(timeStamp))));
+    }
+
+    /**
+     * obtain datetime str with interval
+     */
+    public static String genDateTimeStrInterval(int interval){
+        Long timeStamp = System.currentTimeMillis();  //get current timestamp
+        // convert to 15min timestamp
+        timeStamp = timeStamp / (interval * 60 * 1000) * (interval * 60 * 1000);
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmm");
+        // convert to datetime format
+        return sdf.format(new Date(Long.parseLong(String.valueOf(timeStamp))));
+    }
 }
